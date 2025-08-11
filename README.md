@@ -53,10 +53,13 @@ http://localhost:5500
 
 ### 🧩 API Usage
 Endpoint:
-GET /trivia
+
+`GET /trivia`
+
 Query Parameters:
-* count — number of questions (1–10)
-* difficulty — easy, medium, or hard (optional)
+
+* `count` — number of questions (1–10)
+* `difficulty` — easy, medium, or hard (optional)
 
 Example: 
 
@@ -95,6 +98,7 @@ Relies on OpenTDB API availability.
 No persistent score tracking (stateless).
 
 GitHub Pages refresh delay after commits.
+
 
 
 
