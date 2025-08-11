@@ -63,7 +63,7 @@ Query Parameters:
 
 Example: 
 
-`GET /trivia?count=5&difficulty=easy`
+`GET /trivia?count=1&difficulty=easy`
 
 Sample Response:
 
@@ -101,6 +101,7 @@ Don't forget to turn on or have Docker running prior to doing this ;)
 GNU license used, respectfully requesting no one tries to use this for closed dev
 
 ### Errata / Miscellaneous
-`GET /health` is a hardcoded health check stub that can likely be expanded on
+`GET /health` is a hardcoded health check stub that can likely be expanded on (locally, it'd be like http://127.0.0.1:8000/health)
+
 
 
