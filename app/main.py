@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 import requests
 import html
 import random
@@ -7,6 +8,20 @@ app = FastAPI(
     title = "Retro Game Trivia API",
     description = "A microservice that returns retro video game trivia.",
     version = "1.0.0"
+)
+
+origins = [
+    "https://skycodepilot.github.io",  # GitHub Pages root
+    "https://skycodepilot.github.io/retro-game-trivia",  # if hosted in repo subpath
+    "https://retro-game-trivia.onrender.com"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # or ["*"] for all
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 OPENTDB_URL = "https://opentdb.com/api.php"
