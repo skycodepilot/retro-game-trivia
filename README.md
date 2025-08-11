@@ -82,7 +82,7 @@ Build and run with Docker:
 
 `docker run -p 8000:8000 retro-trivia`
 
-(Don't forget to turn on or have Docker running prior to doing this ;) )
+Don't forget to turn on or have Docker running prior to doing this ;)
 
 ### 🔒 CORS Handling
 Development: I was tempted to set `allow_origins=["*"]` for painless local testing, but have some addresses added so you know what allowed origins are (they're local)
@@ -98,6 +98,7 @@ Relies on OpenTDB API availability.
 No persistent score tracking (stateless).
 
 GitHub Pages refresh delay after commits.
+
 
 
 
