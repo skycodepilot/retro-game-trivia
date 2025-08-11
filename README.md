@@ -32,7 +32,7 @@ The frontend consumes the API and presents an interactive quiz interface.
 ### Clone the repo
 `bash`
 
-`git clone https://github.com/yourusername/retro-game-trivia.git`
+`git clone https://github.com/skycodepilot/retro-game-trivia.git`
 
 `cd retro-game-trivia`
 
@@ -95,6 +95,7 @@ Relies on OpenTDB API availability.
 No persistent score tracking (stateless).
 
 GitHub Pages refresh delay after commits.
+
 
 
 
