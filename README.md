@@ -99,3 +99,6 @@ Don't forget to turn on or have Docker running prior to doing this ;)
 
 ### LICENSE
 GNU license used, respectfully requesting no one tries to use this for closed dev
+
+### Errata / Miscellaneous
+`GET /health` is a hardcoded health check stub that can likely be expanded on
