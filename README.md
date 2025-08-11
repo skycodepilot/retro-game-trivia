@@ -97,11 +97,5 @@ Don't forget to turn on or have Docker running prior to doing this ;)
 * No persistent score tracking (stateless)
 * GitHub Pages refresh delay after commits
 
-
-
-
-
-
-
-
-
+### LICENSE
+GNU license used, respectfully requesting no one tries to use this for closed dev
