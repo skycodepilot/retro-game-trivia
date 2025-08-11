@@ -41,7 +41,7 @@ The frontend consumes the API and presents an interactive quiz interface.
 
 ### Run backend locally
 `uvicorn app.main:app --reload`
-(IF you run into problems running uvicorn locally, fallback to executing "python -m uvicorn" instead)
+(IF you run into problems running uvicorn locally, fallback to executing `python -m uvicorn` instead of `uvicorn`)
 
 ### Backend will be available at:
 http://127.0.0.1:8000
@@ -58,8 +58,12 @@ Query Parameters:
 * count — number of questions (1–10)
 * difficulty — easy, medium, or hard (optional)
 
-Example: `GET /trivia?count=5&difficulty=easy`
+Example: 
+
+`GET /trivia?count=5&difficulty=easy`
+
 Sample Response:
+
 `[
   {
     "question": "In Super Mario Bros., what is Mario's brother's name?",
@@ -70,8 +74,11 @@ Sample Response:
 
 ### 🐳 Docker
 Build and run with Docker:
+
 `docker build -t retro-trivia .`
+
 `docker run -p 8000:8000 retro-trivia`
+
 (Don't forget to turn on or have Docker running prior to doing this ;) )
 
 ### 🔒 CORS Handling
@@ -88,6 +95,7 @@ Relies on OpenTDB API availability.
 No persistent score tracking (stateless).
 
 GitHub Pages refresh delay after commits.
+
 
 
 
