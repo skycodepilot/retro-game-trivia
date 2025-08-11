@@ -48,7 +48,7 @@ http://127.0.0.1:8000
 
 ### 4️⃣ View frontend locally
 Use a local server (e.g., VS Code Live Server) and open:
-http://localhost:5500
+http://localhost:5500/frontend
 (I ran `python -m http.server 5500` from a terminal window to do this)
 
 ### 🧩 API Usage
@@ -102,4 +102,5 @@ GNU license used, respectfully requesting no one tries to use this for closed de
 
 ### Errata / Miscellaneous
 `GET /health` is a hardcoded health check stub that can likely be expanded on
+
 
