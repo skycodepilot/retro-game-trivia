@@ -14,6 +14,7 @@ origins = [
     # "http://localhost:5500", # Locally-hosted testing (uncomment this to test locally)
     "https://skycodepilot.github.io",  # GitHub Pages root
     "https://skycodepilot.github.io/retro-game-trivia",  # if hosted in repo subpath
+    "https://skycodepilot.github.io/retro-game-trivia/frontend",  # in case this is required
 ]
 
 app.add_middleware(
