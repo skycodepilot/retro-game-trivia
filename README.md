@@ -44,12 +44,12 @@ uvicorn app.main:app --reload
 ### Backend will be available at:
 http://127.0.0.1:8000
 
-4️⃣ View frontend locally
+### 4️⃣ View frontend locally
 Use a local server (e.g., VS Code Live Server) and open:
 http://localhost:5500
 (I ran python -m http.server 5500 from a terminal window to do this)
 
-🧩 API Usage
+### 🧩 API Usage
 Endpoint:
 GET /trivia
 Query Parameters:
@@ -66,25 +66,24 @@ Sample Response:
   }
 ]
 
-🐳 Docker
+### 🐳 Docker
 Build and run with Docker:
-
-bash
 docker build -t retro-trivia .
 docker run -p 8000:8000 retro-trivia
 (Don't forget to turn on or have Docker running prior to doing this ;) )
 
-🔒 CORS Handling
+### 🔒 CORS Handling
 Development: I was tempted to allow_origins=["*"] for painless local testing, but have some addresses added so you know what allowed origins are (they're local)
 Production: Explicit trusted domains (GitHub Pages URL) set via .env.
 
-📝 Deployment
+### 📝 Deployment
 Frontend: Push to master branch → GitHub Pages auto-updates.
 Backend: Re-deploy manually on Render after Python code changes. (**IMPORTANT** - make sure you're re-deploying if you did anything to those Python files!)
 
-⚠️ Known Limitations
+### ⚠️ Known Limitations
 Relies on OpenTDB API availability.
 
 No persistent score tracking (stateless).
 
 GitHub Pages refresh delay after commits.
+
