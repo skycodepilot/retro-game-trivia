@@ -86,16 +86,17 @@ Don't forget to turn on or have Docker running prior to doing this ;)
 
 ### 🔒 CORS Handling
 * Development: I was tempted to set `allow_origins=["*"]` for painless local testing, but I kept addresses so you know what allowed origins are (they're local)
-* Production: Explicit trusted domains (GitHub Pages URL) set via .env.
+* Production: Explicit trusted domains (GitHub Pages URL) set via .env
 
 ### 📝 Deployment
-* Frontend: Push to master branch → GitHub Pages auto-updates.
-* Backend: Re-deploy manually on Render after Python code changes. (**IMPORTANT** - make sure you're re-deploying if you did anything to those Python files!)
+* Frontend: Push to master branch → GitHub Pages auto-updates
+* Backend: Re-deploy manually on Render after Python code changes (**IMPORTANT** - make sure you're re-deploying if you did anything to those Python files!)
 
 ### ⚠️ Known Limitations
 * Relies on OpenTDB API availability
 * No persistent score tracking (stateless)
 * GitHub Pages refresh delay after commits
+
 
 
 
