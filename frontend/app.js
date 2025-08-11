@@ -1,7 +1,9 @@
 // app.js - simple front-end to call the Trivia API and render a quiz
 
 // Replace this BASE URL with your deployed API URL.
-const API_BASE_URL = "https://retro-game-trivia.onrender.com"; // e.g. https://retro-trivia.onrender.com
+// https://retro-game-trivia.onrender.com for render target
+// http://127.0.0.1:8000 for local testing
+const API_BASE_URL = "https://retro-game-trivia.onrender.com";
 
 const fetchButton = document.getElementById('fetchBtn');
 const quizSection = document.getElementById('quizSection');
@@ -19,7 +21,7 @@ function el(tag, className, text){
 // fetch trivia data from your API
 async function fetchTrivia(count, difficulty){
   const params = new URLSearchParams();
-  params.set('count', String(count));
+  if(count) params.set('count', count);
   if(difficulty) params.set('difficulty', difficulty);
 
   const url = `${API_BASE_URL}/trivia?${params.toString()}`;
@@ -72,7 +74,7 @@ function renderQuiz(questions){
 
 // wire up the main button
 fetchButton.addEventListener('click', async () => {
-  const count = Number(countInput.value) || 5;
+  const count = Number(countInput.value) || '';
   const difficulty = difficultySelect.value || '';
 
   fetchButton.disabled = true;
