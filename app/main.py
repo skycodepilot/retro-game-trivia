@@ -3,6 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 import html
 import random
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ENV = os.getenv("ENVIRONMENT", "dev")
 
 app = FastAPI(
     title = "Retro Game Trivia API",
@@ -10,13 +16,22 @@ app = FastAPI(
     version = "1.0.0"
 )
 
-origins = [
-    # "http://localhost:5500", # Locally-hosted testing (uncomment this to test locally)
-    "https://skycodepilot.github.io",  # GitHub Pages root
-    "https://skycodepilot.github.io/retro-game-trivia",  # if hosted in repo subpath
-    "https://skycodepilot.github.io/retro-game-trivia/frontend",  # in case this is required
-    "https://retro-game-trivia.onrender.com"
-]
+origins = []
+
+if ENV == "dev":
+    origins = [
+        "http://localhost:5500",
+        "http://127.0.0.1:8000"
+    ]
+elif ENV == "prod":
+    origins = [
+        "https://skycodepilot.github.io",  # GitHub Pages root
+        "https://skycodepilot.github.io/retro-game-trivia",  # if hosted in repo subpath
+        "https://skycodepilot.github.io/retro-game-trivia/frontend",  # in case this is required
+        "https://retro-game-trivia.onrender.com"
+    ]
+else: # safety fallback (empty list - blocks all browser requests)
+    origins = []
 
 app.add_middleware(
     CORSMiddleware,
@@ -28,6 +43,9 @@ app.add_middleware(
 
 OPENTDB_URL = "https://opentdb.com/api.php"
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
 @app.get("/trivia")
 def get_trivia(
     count: int = Query(5, ge = 1, le = 10, description = "Number of trivia questions"),
