@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Retro Game Trivia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Retro Game Trivia</h1>
+        <p class="lead">Quick retro video-game trivia. Fetches questions from the API.</p>
+      </header>
+
+      <section class="controls">
+        <label>
+          Count
+          <input id="countInput" type="number" min="1" max="10" value="5" />
+        </label>
+
+        <label>
+          Difficulty
+          <select id="difficultySelect">
+            <option value="">Any</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <button id="fetchBtn">Fetch Trivia</button>
+      </section>
+
+      <section id="quizSection" class="quiz"></section>
+
+      <footer class="meta">
+        <p>Tip: open the network inspector to see the JSON response.</p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
