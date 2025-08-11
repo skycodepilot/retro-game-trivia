@@ -1,7 +1,7 @@
 // app.js - simple front-end to call the Trivia API and render a quiz
 
 // Replace this BASE URL with your deployed API URL.
-const API_BASE_URL = "https://opentdb.com/api.php"; // e.g. https://retro-trivia.onrender.com
+const API_BASE_URL = "https://opentdb.com/api.php/trivia"; // e.g. https://retro-trivia.onrender.com
 
 const fetchButton = document.getElementById('fetchBtn');
 const quizSection = document.getElementById('quizSection');
