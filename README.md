@@ -12,7 +12,7 @@ The frontend consumes the API and presents an interactive quiz interface.
 ---
 
 ## 🚀 Live Demo
-- **Frontend (GitHub Pages)**: https://skycodepilot.github.io/retro-game-trivia  
+- **Frontend (GitHub Pages)**: https://skycodepilot.github.io/retro-game-trivia/frontend
 - **Backend (Render)**: https://retro-game-trivia.onrender.com/trivia
 
 ---
@@ -102,3 +102,4 @@ GNU license used, respectfully requesting no one tries to use this for closed de
 
 ### Errata / Miscellaneous
 `GET /health` is a hardcoded health check stub that can likely be expanded on
+
