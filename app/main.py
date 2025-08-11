@@ -15,6 +15,7 @@ origins = [
     "https://skycodepilot.github.io",  # GitHub Pages root
     "https://skycodepilot.github.io/retro-game-trivia",  # if hosted in repo subpath
     "https://skycodepilot.github.io/retro-game-trivia/frontend",  # in case this is required
+    "https://retro-game-trivia.onrender.com"
 ]
 
 app.add_middleware(
